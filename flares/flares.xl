@@ -19,38 +19,29 @@ module_description "fr",
 // Example use:
 //
 // flare_shader_time -> page_time * 1000
-// flare_shader_screen_ratio -> window_width / window_height
-// flare_shader_color_level -> 2.0
 // flare_shader
+// shader_set saturation := 1.0
+// shader_set resolution := (window_width ; widow_height)
 // rectangle 0, 0, window_width, window_height
 //
 flare_shader ->
     shader_program
-        vertex_shader <<
-        attribute vec2 pos;
-        uniform float time;
-        varying vec2 screenPos;
-
-        void main(void) {
-            gl_Position = vec4(pos, 0.0, 1.0);
-            screenPos = pos;
-        }
-        >>
         fragment_shader <<
         #ifdef GL_ES
         precision highp float;
         #endif
 
-        uniform float screenRatio;
+        uniform vec2  resolution;
+        uniform float time;
         uniform float blink;
         uniform float blink2;
-        uniform float magic;
+        uniform float saturation;
 
-        varying vec2 screenPos;
         uniform vec2 mBallPos[5];
         uniform float mBallWeights[5];
 
         void main() {
+            vec2 screenPos = gl_FragCoord.xy / resolution.xy;
             float distSum = 0.0;
             for(int i = 0; i < 5; ++i)
                 distSum += 1.0 / distance(mBallPos[i], screenPos)*mBallWeights[i];
@@ -91,7 +82,7 @@ flare_shader ->
             float dist2center = 1.0 - pow(dot(screenPos,screenPos),0.8)*0.5;
             color *= clamp(dist2center, 0.0, 1.0);
             float lum = color.r * 0.3 + color.g * 0.6 + color.b * 0.1;
-            color = mix(vec3(lum, lum, lum), color, magic);
+            color = mix(vec3(lum, lum, lum), color, saturation);
             gl_FragColor = vec4(color, 1.0);
         }
         >>
@@ -100,8 +91,6 @@ flare_shader ->
     shader_set time := tm
     shader_set blink := 5.0 - (integer (tm / 500.0) ) mod 20
     shader_set blink2 := 20.0 - (integer (tm / 120.0) ) mod 20
-    shader_set magic := flare_shader_color_level
-    shader_set screenRatio := flare_shader_screen_ratio
     shader_set mBallWeights := (2.3 + cos (tm * 5.0e-06) + cos (tm * 1.0e-07) ; 2.0 + sin (tm * 0.0001) * cos (tm * 0.001) ; -0.4 + cos (tm * 0.005) * 1.5; -1.3 + cos (tm * 1.0e-06) * 1.6; 1.0 + sin (tm * 0.0001) * 0.3)
     shader_set mBallPos := (0.0; sin (tm * 0.001) ; -0.5 * cos (tm * 0.001) * cos (tm * 1.0e-05) ; -0.5 * sin (tm * 0.002) * 0.3; -0.3 * cos (tm * 0.001) * 0.4; -0.3 * sin (tm * 0.0012) * 0.3; 0.8 * cos (tm * 0.001) ; -0.8 * sin (tm * 0.001) ; 0.7 * cos (tm * 0.0001) ; 0.7 * sin (tm * 0.0001) )
 
