@@ -24,14 +24,29 @@ module_description "fr",
 // shader_set resolution := (window_width ; widow_height)
 // rectangle 0, 0, window_width, window_height
 //
+
+tm -> 0.0
+st -> 0.0
+
+flare t:real, s:real ->
+    st := s
+    tm := t
+    flare_shader
+
 flare_shader ->
     shader_program
+        vertex_shader <<
+        void main()
+        {
+            gl_Position = ftransform();
+            gl_TexCoord[0] = gl_MultiTexCoord0;
+        }
+        >>
         fragment_shader <<
         #ifdef GL_ES
         precision highp float;
         #endif
 
-        uniform vec2  resolution;
         uniform float time;
         uniform float blink;
         uniform float blink2;
@@ -40,8 +55,9 @@ flare_shader ->
         uniform vec2 mBallPos[5];
         uniform float mBallWeights[5];
 
-        void main() {
-            vec2 screenPos = gl_FragCoord.xy / resolution.xy;
+        void main()
+        {
+            vec2 screenPos = gl_TexCoord[0].st;
             float distSum = 0.0;
             for(int i = 0; i < 5; ++i)
                 distSum += 1.0 / distance(mBallPos[i], screenPos)*mBallWeights[i];
@@ -86,8 +102,7 @@ flare_shader ->
             gl_FragColor = vec4(color, 1.0);
         }
         >>
-    tm -> 0.0
-    tm := flare_shader_time 
+    shader_set saturation := st
     shader_set time := tm
     shader_set blink := 5.0 - (integer (tm / 500.0) ) mod 20
     shader_set blink2 := 20.0 - (integer (tm / 120.0) ) mod 20
