@@ -3,7 +3,9 @@ module_description
     name "Flares effect"
     description "GLSL fragment shader to generate a changing picture. " &
                 "Adapted from " &
-                "https://github.com/nical/webgl-flare."
+                "https://github.com/nical/webgl-flare. Thanks to the " &
+                "original authors: Paul Adenot, Rémi Papillié and " &
+                "Nicolas Silva."
     import_name "Flares"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
@@ -13,7 +15,8 @@ module_description "fr",
     name "Effet Flares"
     description "Fragment shader GLSL pour générer une image changeante. " &
                 "Adapté depuis " &
-                "https://github.com/nical/webgl-flare."
+                "https://github.com/nical/webgl-flare. Merci aux "
+                "auteurs: Paul Adenot, Rémi Papillié et Nicolas Silva."
 
 
 // Example use:
