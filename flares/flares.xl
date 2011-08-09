@@ -21,10 +21,7 @@ module_description "fr",
 
 // Example use:
 //
-// flare_shader_time -> page_time * 1000
-// flare_shader
-// shader_set saturation := 1.0
-// shader_set resolution := (window_width ; widow_height)
+// flare_shader page_time * 1000, 1.0
 // rectangle 0, 0, window_width, window_height
 //
 
