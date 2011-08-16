@@ -31,8 +31,6 @@ st -> 0.0
 flare t:real, s:real ->
     st := s
     tm := t
-    // Set an empty texture to define texture coordinates (the shader uses them)
-    texture ""
     flare_shader
 
 flare_shader ->
