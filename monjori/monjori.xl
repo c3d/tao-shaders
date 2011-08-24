@@ -29,6 +29,8 @@ tm -> 0.0
 
 monjori t:real ->
     tm := t
+    // Set an empty texture to define texture coordinates (the shader uses them)
+    texture ""
     monjori_shader
 
 monjori_shader ->
