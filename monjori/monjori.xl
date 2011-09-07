@@ -22,22 +22,36 @@ module_description "fr",
 
 // Example use:
 //
-// monjori_shader
-// shader_set time := page_time * 0.1
-// shader_set resolution := (window_width ; window_height)
+// monjori page_time * 0.1
+
+// Time
+tm -> 0.0
+
+monjori t:real ->
+    tm := t
+    // Set an empty texture to define texture coordinates (the shader uses them)
+    texture ""
+    monjori_shader
+
 monjori_shader ->
     shader_program
+        vertex_shader <<
+            void main()
+            {
+                gl_Position = ftransform();
+                gl_TexCoord[0] = gl_MultiTexCoord0;
+            }
+        >>
         fragment_shader <<
             #ifdef GL_ES
             precision highp float;
             #endif
 
-            uniform vec2 resolution;
             uniform float time;
 
             void main(void)
             {
-                vec2 p = -1.0 + 2.0 * gl_FragCoord.xy / resolution.xy;
+                vec2 p = -1.0 + 2.0 *  gl_TexCoord[0].st;
                 float a = time*40.0;
                 float d,e,f,g=1.0/40.0,h,i,r,q;
                 e=400.0*(p.x*0.5+0.5);
@@ -61,4 +75,5 @@ monjori_shader ->
                 f=(sin(a*g)+1.0)/2.0;
                 gl_FragColor=vec4(vec3(f*i/1.6,i/2.0+d/13.0,i)*d*p.x+vec3(i/1.3+d/8.0,i/2.0+d/18.0,i)*d*(1.0-p.x),1.0);
             }
-        >>
+        >>        
+    shader_set time := tm
