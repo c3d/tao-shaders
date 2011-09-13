@@ -1,10 +1,10 @@
 # ******************************************************************************
-#  sinuous.pro                                                      Tao project
+#  sparks.pro                                                        Tao project
 # ******************************************************************************
 # File Description:
-# Qt build file for the Monjori module
+# Qt build file for the Sparks module
 #
-# The Monjori module defines a GLSL shader 
+# The Sparks module defines a GLSL shader
 #
 # ******************************************************************************
 # This software is property of Taodyne SAS - Confidential
@@ -13,12 +13,12 @@
 # (C) 2011 Taodyne SAS
 # ******************************************************************************
 
-MODINSTDIR = sinuous
+MODINSTDIR = sparks
 
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = sinuous.xl module.doxy.h
+OTHER_FILES = sparks.xl module.doxy.h
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
