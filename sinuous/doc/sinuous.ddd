@@ -1,6 +1,0 @@
-import Sinuous
-
-locally
-    color "white"
-    // Draw changing ribbon
-    sinuous_shape 0.0, 0.0, window_width, window_height
