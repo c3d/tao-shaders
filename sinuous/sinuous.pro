@@ -18,7 +18,7 @@ MODINSTDIR = sinuous
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = sinuous.xl module.doxy.h
+OTHER_FILES = sinuous.xl sinuous.doxy.h
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin

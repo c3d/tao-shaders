@@ -18,7 +18,10 @@ MODINSTDIR = sparks
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = sparks.xl module.doxy.h
+OTHER_FILES = sparks.xl sparks.doxy.h
 
-INSTALLS    += thismod_icon
+files.path  = $$APPINST/modules/sparks
+files.files = LICENSE
+
+INSTALLS    += thismod_icon files
 INSTALLS    -= thismod_bin

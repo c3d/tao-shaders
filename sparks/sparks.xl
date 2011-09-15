@@ -2,10 +2,11 @@ module_description
     id "1064a64f-0eaa-4afd-801b-297594c4b86c"
     name "Sparks effect"
     description "GLSL fragment shader to generate a changing picture with some sparks. " &
-                "Shader code written by AlteredQualia http://alteredqualia.com/ " &
+                "Shader code written by Ashima Arts and Stefan Gustavson" &
                 "for the WebGL demo Sparks. " &
                 "Adapted from " &
-                "https://github.com/ashima/webgl-noise/wiki."
+                "https://github.com/ashima/webgl-noise/wiki. " &
+                "For further informations, see LICENSE file in the module directory."
     import_name "Sparks"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
@@ -14,10 +15,11 @@ module_description
 module_description "fr",
     name "Effet Eclair"
     description "Fragment shader GLSL pour générer une image changeante avec des sortes d'éclairs. " &
-                "Code shader écrit par AlteredQualia http://alteredqualia.com/ " &
+                "Code shader écrit par Ashima Arts and Stefan Gustavson " &
                 "pour la démo WebGL Sparks. " &
                 "Adapté depuis " &
-                "https://github.com/ashima/webgl-noise/wiki."
+                "https://github.com/ashima/webgl-noise/wiki. " &
+                "Pour plus d'informations, voir le fichier LICENSE dans le repertoire du module."
 
 
 // Example use:
@@ -71,7 +73,7 @@ sparks_shader ->
 
                 gl_Position = ftransform();
                 gl_TexCoord[0] = gl_MultiTexCoord0;
-                vUv = gl_Vertex.xy * scale / 100;
+                vUv = gl_Vertex.xy * scale / 100.0;
                 gl_FrontColor = gl_Color;
             }
        >>
