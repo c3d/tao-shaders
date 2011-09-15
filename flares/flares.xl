@@ -9,7 +9,7 @@ module_description
     import_name "Flares"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
-    version 1.0
+    version 1.01
 
 module_description "fr",
     name "Effet Flares"
@@ -41,7 +41,7 @@ flare_shader ->
         void main()
         {
             gl_Position = ftransform();
-            gl_TexCoord[0] = gl_MultiTexCoord0;
+            gl_TexCoord[0] = gl_TextureMatrix[0]*gl_MultiTexCoord0;
         }
         >>
         fragment_shader <<
