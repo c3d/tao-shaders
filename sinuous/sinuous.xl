@@ -11,46 +11,16 @@ module_description "fr",
     name "Shader sinusoidal"
     description "Fragment shader GLSL pour générer un ruban changeant. "
 
-sinuous_shader ->
-    shader_program
-        vertex_shader <<
-        void main()
-        {
-            gl_Position = ftransform();
-            gl_TexCoord[0] = gl_MultiTexCoord0;
-        }
-        >>
-        fragment_shader <<
-        uniform vec2 move;
-        uniform vec4 color;
-        uniform vec3 sin_low;
-        uniform vec3 pos_low;
-        uniform vec3 mul_low;
-        uniform vec3 sin_high;
-        uniform vec3 pos_high;
-        uniform vec3 mul_high;
-
-        void main()
-        {
-            vec2 p = gl_TexCoord[0].st + move;
-
-            float lp = dot(p, pos_low.xy) + pos_low.z;
-            float ls = dot(p, sin_low.xy) + sin_low.z;
-            float lm = dot(p, mul_low.xy) + mul_low.z;
-            float ldelta = lp - lm * sin(ls);
-            float lamp = clamp(ldelta, 0.0, 1.0);
-
-            float hp = dot(p, pos_high.xy) + pos_high.z;
-            float hs = dot(p, sin_high.xy) + sin_high.z;
-            float hm = dot(p, mul_high.xy) + mul_high.z;
-            float hdelta = hp - hm * sin(hs);
-            float hamp = clamp(hdelta, 0.0, 1.0);
-
-            gl_FragColor = lamp * (1.0-hamp) * color;
-        }
-        >>
+// Example use:
+//
+// sinuous_shape 0.0, 0.0, window_width, window_height
 
 sinuous_shape X:real, Y:real, W:real, H:real ->
+    /**
+    * Draw four interconnected sinuous shape at the given coordinates.
+    * @a X and @a Y indicate the center of the shape.
+    * @a W and @a H are its dimensions.
+    **/
     locally
         sinuous_shader
 
@@ -84,3 +54,46 @@ sinuous_shape X:real, Y:real, W:real, H:real ->
         shader_set color := (0.8 + 0.2 * sin (0.17 * time), 0.2, 0.1, 0.4)
         rectangle X, Y, W, H
 
+sinuous_shader ->
+    /**
+    * Install the sinuous shader in the current drawing context.
+    **/
+    // Set an empty texture to define texture coordinates (the shader uses them)
+    texture ""
+    shader_program
+        vertex_shader <<
+        void main()
+        {
+            gl_Position = ftransform();
+            gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+        }
+        >>
+        fragment_shader <<
+        uniform vec2 move;
+        uniform vec4 color;
+        uniform vec3 sin_low;
+        uniform vec3 pos_low;
+        uniform vec3 mul_low;
+        uniform vec3 sin_high;
+        uniform vec3 pos_high;
+        uniform vec3 mul_high;
+
+        void main()
+        {
+            vec2 p = gl_TexCoord[0].st + move;
+
+            float lp = dot(p, pos_low.xy) + pos_low.z;
+            float ls = dot(p, sin_low.xy) + sin_low.z;
+            float lm = dot(p, mul_low.xy) + mul_low.z;
+            float ldelta = lp - lm * sin(ls);
+            float lamp = clamp(ldelta, 0.0, 1.0);
+
+            float hp = dot(p, pos_high.xy) + pos_high.z;
+            float hs = dot(p, sin_high.xy) + sin_high.z;
+            float hm = dot(p, mul_high.xy) + mul_high.z;
+            float hdelta = hp - hm * sin(hs);
+            float hamp = clamp(hdelta, 0.0, 1.0);
+
+            gl_FragColor = lamp * (1.0-hamp) * color;
+        }
+        >>
