@@ -1,29 +1,27 @@
 /**
- * @defgroup Shading Shading
+ * @defgroup Sinuous Sinuous
  * @ingroup Modules
  *
- * Apply some shading effects.
+ * Generate a changing ribbon.
  *
- * This module allows you to add to your scene some nice shading effects.
- * For instance,
- * @include shading.ddd
+ * This module allows you to create a changing picture with some sinuous effects.
  *
- * @image html shading.png "Output of shading.ddd"
+ * The following code shows an example of this module.
+ * @include sinuous.ddd
+ *
+ * @image html sinuous.png "Output from sinuous.ddd"
  * @{
  */
 
 /**
- * Install the sinuous shader in the current drawing context.
- */
-sinuous_shader();
+* Draw sinuous shape.
+*
+* Draw four interconnected sinuous shape at the given coordinates.
+* @a X and @a Y indicate the center of the shape.
+* @a W and @a H are its dimensions.
+**/
+sinuous_shape(X:real, Y:real, W:real, H:real);
 
 /**
- * Draw four interconnected sinuous shape at the given coordinates.
- * @a X and @a Y indicate the center of the shape.
- * @a W and @a H are its dimensions.
- */
-sinuous_shape(real X, real Y, real W, real H);
-
-/**
-   @}
+* @}
 */
