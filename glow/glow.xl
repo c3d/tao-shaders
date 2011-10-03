@@ -56,7 +56,7 @@ radial_glow_shader ->
             void main()
             {
                 gl_Position = ftransform();
-                gl_TexCoord[0].xy = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
+                gl_TexCoord[0].xy = gl_TextureMatrix[0] * gl_MultiTexCoord0;
             }
         >>
         fragment_shader <<
@@ -72,8 +72,8 @@ radial_glow_shader ->
             **/
             vec2 computeRadialSamples(int n)
             {
-                float step = 360.0 / float(number);
-                return vec2(sin(step * float(n)), cos(step * float(n)));
+                float step = 360.0 / (float) number;
+                return vec2(sin(step * n), cos(step * n));
             }
 
             void main()
@@ -93,7 +93,7 @@ radial_glow_shader ->
                 }
 
                 // Divided by the number of samples
-                sum *= 1.0/float(number);
+                sum *= 1.0/((float) number);
 
                 //Blend the original color with the averaged pixels
                 vec4 mainColor = glow * color + shadow * sum;
