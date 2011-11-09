@@ -1,0 +1,34 @@
+import Glow
+
+clear_color 0.0, 0.0, 0.0, 0.0
+color "white"
+frame_texture window_width, window_height,
+    time
+    clear_color 0.0, 0.0, 0.0, 1.0
+    locally
+        color 0, 0.7, 1.0
+        rotatex 90
+        rotatez -45
+        torus 0, 0, 0, 1500, 200, 1500, 50, 50, 0.1
+    locally
+        color 1.0, 0.2, 0.0
+        rotatex 90
+        rotatez -45
+        torus 0, -200, 0, 1500, 200, 1500, 50, 50, 0.1
+    locally
+        color 0.0, 1.0, 0.0
+        rotatex 90
+        rotatez -45
+        torus 0, 200, 0, 1500, 200, 1500, 50, 50, 0.1
+    locally
+        color 1.0, 0.0, 0.5
+        rotatex 90
+        rotatez -45
+        torus 0, -400, 0, 1500, 200, 1500, 50, 50, 0.1
+    locally
+        color 1.0, 1.0, 0.0
+        rotatex 90
+        rotatez -45
+        torus 0, 400, 0, 1500, 200, 1500, 50, 50, 0.1
+radial_glow 15, 1.0, 1.0, 1.0, 100, 100
+rectangle 0, 0, window_width, window_height
