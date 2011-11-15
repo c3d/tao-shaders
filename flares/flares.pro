@@ -18,18 +18,7 @@ MODINSTDIR = flares
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = flares.xl module.doxy.h \
-    flares2.xl
-
-CRYPT_XL_SOURCES = flares2.xl
-include(../../crypt_xl.pri)
+OTHER_FILES = flares.xl module.doxy.h
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
-
-LICENSE_FILES = flares.taokey.notsigned
-include(../../licenses.pri)
-
-QMAKE_SUBSTITUTES = doc/Doxyfile.in
-DOXYFILE = doc/Doxyfile
-include(../../modules_doc.pri)
