@@ -1,18 +1,11 @@
 /**
- * @~english
- * @taomoduledescription{Flares, Flares shader}
+ * @defgroup Flares Flares shader
+ * @ingroup Modules
  *
  * GLSL fragment shader to generate a changing picture.
  *
+ * 
  * An example:
- * @~french
- * @taomoduledescription{Flares, Effet "Flares"}
- *
- * Un <em>fragment shader</em> GLSL qui génère des formes géométriques
- * changeantes.
- *
- * Un example:
- * @~
  @code
 import Flares
 
@@ -34,15 +27,13 @@ animated_star N:integer -> animated_star N, N
 animated_star Nb
  @endcode
  *
- * @image html "flares_example.png" "Flares"
+ * @image html "flares_example.png" "Example"
  *
- * @endtaomoduledescription{Flares}
  * @{
  */
 
 
 /**
- * @~english
  * Create the Flares texture
  *
  * The picture changes as the value of @p p changes.
@@ -52,17 +43,6 @@ animated_star Nb
  * @p saturation is a positive real value to control the color. With
  * 0.0, you get a black-and-white picture. With 1.0 or 2.0 you get
  * a much more colorful picture.
- *
- * @~french
- * Crée la texture "Flares"
- *
- * L'image change pour chaque valeur de @p p. Vous pouvez par exemple
- * utiliser l'heure ou la position de la souris comme base pour la valeur
- * de @p p.
- *
- * @p saturation est une valeur réelle positive qui permet de contrôler
- * la saturation de la couleur. 0.0 donne une image en noir et blanc, avec
- * 1.0 ou 2.0 vous obtenez une image riche en couleurs.
  */
 flares(p:real, saturation:real);
 
