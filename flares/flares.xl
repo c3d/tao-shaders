@@ -18,10 +18,98 @@ module_description "fr",
                 "https://github.com/nical/webgl-flare. Merci aux "
                 "auteurs: Paul Adenot, Rémi Papillié et Nicolas Silva."
 
-import "flares2.xl.bin"
 
 // Example use:
 //
 // flare page_time * 1000, 1.0
 // rectangle 0, 0, window_width, window_height
 //
+
+tm -> 0.0
+st -> 0.0
+
+flares t:real, s:real ->
+    st := s
+    tm := t
+    // Set an empty texture to define texture coordinates (the shader uses them)
+    texture ""
+    flare_shader
+
+flare_shader ->
+    shader_program
+        vertex_shader <<
+        void main()
+        {
+            gl_Position = ftransform();
+            gl_TexCoord[0] = gl_TextureMatrix[0]*gl_MultiTexCoord0;
+        }
+        >>
+        fragment_shader <<
+        #ifdef GL_ES
+        precision highp float;
+        #endif
+
+        uniform float time;
+        uniform float blink;
+        uniform float blink2;
+        uniform float saturation;
+
+        uniform vec2 mBallPos[5];
+        uniform float mBallWeights[5];
+
+        void main()
+        {
+            vec2 screenPos = gl_TexCoord[0].st;
+            float distSum = 0.0;
+            for(int i = 0; i < 5; ++i)
+                distSum += 1.0 / distance(mBallPos[i], screenPos)*mBallWeights[i];
+
+            distSum *= 1.5;
+            vec3 color = vec3(1.0, 0.5, 3.0);
+            float sinDistSum = sin(distSum);
+            if (distSum > 40.0)
+            {
+                color = vec3(screenPos * 0.5 + vec2(0.5, 0.5), 0.0);
+            }
+            else if (abs(distSum - (6.28 * blink2 + 1.57)) < 0.4)
+            {
+                color = vec3(1.0, 1.0, 1.0);
+            }
+            else if (distSum > 30.0)
+            {
+                color = vec3(0.0, 0.0, 0.0);
+            }
+            else if (sinDistSum > 0.8)
+            {
+                if (abs(distSum - (6.28 * blink + 1.57)) < 0.3)
+                {
+                    color = vec3(screenPos * 0.5 + vec2(0.5, 0.5), 0.0);
+                }
+                else
+                {
+                    color = vec3(0.0, 0.0, 50.0 - distSum) * 0.002;
+                }
+            }
+            else
+            {
+                color = clamp(vec3(0.32, 0.45, 0.58) + vec3(screenPos.yyy)*0.4 - 0.1, 0.0,1.0);
+
+                if (mod(gl_FragCoord.y * 0.5, 3.0) < 0.5)
+                    color *= 0.86;
+            }
+            float dist2center = 1.0 - pow(dot(screenPos,screenPos),0.8)*0.5;
+            color *= clamp(dist2center, 0.0, 1.0);
+            float lum = color.r * 0.3 + color.g * 0.6 + color.b * 0.1;
+            color = mix(vec3(lum, lum, lum), color, saturation);
+            gl_FragColor = vec4(color, 1.0);
+        }
+        >>
+    shader_set saturation := st
+    shader_set time := tm
+    shader_set blink := 5.0 - (integer (tm / 500.0) ) mod 20
+    shader_set blink2 := 20.0 - (integer (tm / 120.0) ) mod 20
+    shader_set mBallWeights := (2.3 + cos (tm * 5.0e-06) + cos (tm * 1.0e-07) ; 2.0 + sin (tm * 0.0001) * cos (tm * 0.001) ; -0.4 + cos (tm * 0.005) * 1.5; -1.3 + cos (tm * 1.0e-06) * 1.6; 1.0 + sin (tm * 0.0001) * 0.3)
+    shader_set mBallPos := (0.0; sin (tm * 0.001) ; -0.5 * cos (tm * 0.001) * cos (tm * 1.0e-05) ; -0.5 * sin (tm * 0.002) * 0.3; -0.3 * cos (tm * 0.001) * 0.4; -0.3 * sin (tm * 0.0012) * 0.3; 0.8 * cos (tm * 0.001) ; -0.8 * sin (tm * 0.001) ; 0.7 * cos (tm * 0.0001) ; 0.7 * sin (tm * 0.0001) )
+
+// Compatibility
+flare t:real, s:real -> flares t, s

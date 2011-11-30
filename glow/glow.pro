@@ -18,15 +18,7 @@ MODINSTDIR = glow
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = glow.xl glow.doxy.h \
-    glow2.xl
-
-BIN_XL_SOURCES = glow2.xl
-include(../../serialize_xl.pri)
+OTHER_FILES = glow.xl glow.doxy.h
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
-
-LICENSE_FILES = glow.taokey.notsigned
-include(../../licenses.pri)
-
