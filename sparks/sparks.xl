@@ -21,5 +21,10 @@ module_description "fr",
                 "https://github.com/ashima/webgl-noise/wiki. " &
                 "Pour plus d'informations, voir le fichier LICENSE dans le repertoire du module."
 
-
 import "sparks2.xl.bin"
+
+// Example use:
+//
+// color 0.7, 0.7, 1.0, 1.0
+// sparks_color 1.0, 0.0, 0.0, 1.0
+// sparks page_time * 0.3, 0.05, 0.05

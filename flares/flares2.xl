@@ -21,11 +21,6 @@
 //  (C) 2011 Catherine Burvelle <cathy@taodyne.com>
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
-// Example use:
-//
-// flare page_time * 1000, 1.0
-// rectangle 0, 0, window_width, window_height
-//
 
 license_ok ->
     if check_license ("Flares 1.0", false) then

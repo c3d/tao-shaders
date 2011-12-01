@@ -21,11 +21,6 @@
 //  (C) 2011 Catherine Burvelle <cathy@taodyne.com>
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
-// Example use:
-//
-// color 0.7, 0.7, 1.0, 1.0
-// sparks_color 1.0, 0.0, 0.0, 1.0
-// sparks page_time * 0.3, 0.05, 0.05
 
 license_ok ->
     if check_license ("Sparks 1.0", false) then
