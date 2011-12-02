@@ -18,5 +18,10 @@ module_description "fr",
                 "https://github.com/nical/webgl-flare. Merci aux "
                 "auteurs: Paul Adenot, Rémi Papillié et Nicolas Silva."
 
-
 import "flares2.xl.bin"
+
+// Example use:
+//
+// flare page_time * 1000, 1.0
+// rectangle 0, 0, window_width, window_height
+//

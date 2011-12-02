@@ -19,5 +19,9 @@ module_description "fr",
                 "Adapté depuis " &
                 "http://www.iquilezles.org/apps/shadertoy/?p=monjori."
 
-
 import "monjori2.xl.bin"
+
+// Example use:
+//
+// monjori page_time * 0.1
+

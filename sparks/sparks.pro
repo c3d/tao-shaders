@@ -18,10 +18,19 @@ MODINSTDIR = sparks
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = sparks.xl sparks.doxy.h
+OTHER_FILES = sparks.xl sparks.doxy.h \
+    sparks2.xl
 
 files.path  = $$APPINST/modules/sparks
 files.files = LICENSE
 
+BIN_XL_SOURCES = sparks2.xl
+include(../../serialize_xl.pri)
+
 INSTALLS    += thismod_icon files
 INSTALLS    -= thismod_bin
+
+LICENSE_FILES = sparks.taokey.notsigned
+include(../../licenses.pri)
+
+
