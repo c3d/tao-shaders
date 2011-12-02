@@ -18,16 +18,7 @@ MODINSTDIR = sinuous
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = sinuous.xl sinuous.doxy.h \
-    sinuous2.xl
-
-BIN_XL_SOURCES = sinuous2.xl
-include(../../serialize_xl.pri)
+OTHER_FILES = sinuous.xl sinuous.doxy.h
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
-
-LICENSE_FILES = sinuous.taokey.notsigned
-include(../../licenses.pri)
-
-
