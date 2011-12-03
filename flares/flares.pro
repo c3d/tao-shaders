@@ -21,8 +21,8 @@ include($${TAO_SDK}/modules/modules.pri)
 OTHER_FILES = flares.xl module.doxy.h \
     flares2.xl
 
-BIN_XL_SOURCES = flares2.xl
-include(../../serialize_xl.pri)
+CRYPT_XL_SOURCES = flares2.xl
+include(../../crypt_xl.pri)
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin

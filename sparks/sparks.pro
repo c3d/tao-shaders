@@ -24,8 +24,8 @@ OTHER_FILES = sparks.xl sparks.doxy.h \
 files.path  = $$APPINST/modules/sparks
 files.files = LICENSE
 
-BIN_XL_SOURCES = sparks2.xl
-include(../../serialize_xl.pri)
+CRYPT_XL_SOURCES = sparks2.xl
+include(../../crypt_xl.pri)
 
 INSTALLS    += thismod_icon files
 INSTALLS    -= thismod_bin
