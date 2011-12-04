@@ -15,4 +15,4 @@ module_description "fr",
 //
 // sinuous_shape 0.0, 0.0, window_width, window_height
 
-import "sinuous2.xl.crypt"
+import "sinuous2.xl.bin"
