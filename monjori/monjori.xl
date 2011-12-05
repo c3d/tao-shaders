@@ -19,7 +19,7 @@ module_description "fr",
                 "Adapté depuis " &
                 "http://www.iquilezles.org/apps/shadertoy/?p=monjori."
 
-import "monjori2.xl.bin"
+import "monjori2.xl.crypt"
 
 // Example use:
 //
