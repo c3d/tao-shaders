@@ -23,10 +23,10 @@
 // ****************************************************************************
 
 license_ok ->
-    if check_impress_or_license "Monjori 1.011" then
+    if check_license ("Monjori 1.0", false) then
         true
     else
-        if blink (1.0, 1.0, 300.0) then
+        if blink (1.0, 1.0) then
            true
         else
            false

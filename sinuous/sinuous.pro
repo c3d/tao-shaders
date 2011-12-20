@@ -30,7 +30,4 @@ INSTALLS    -= thismod_bin
 LICENSE_FILES = sinuous.taokey.notsigned
 include(../../licenses.pri)
 
-QMAKE_SUBSTITUTES = doc/Doxyfile.in
-DOXYFILE = doc/Doxyfile
-DOXYLANG = en,fr
-include(../../modules_doc.pri)
+

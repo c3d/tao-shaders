@@ -23,10 +23,10 @@
 // ****************************************************************************
 
 license_ok ->
-    if check_impress_or_license "Glow 1.002" then
+    if check_license ("Glow 1.0", false) then
         true
     else
-        if blink (1.0, 1.0, 300.0) then
+        if blink (1.0, 1.0) then
            true
         else
            false
@@ -59,7 +59,7 @@ GLOW_WIDTH := 500.0
 GLOW_SAMPLES -> 7
 GLOW_SAMPLES := 7
 
-radial_glow n:integer, l:real, g:real, s:real, w:real, h:real ->
+radial_glow n:real, l:real, g:real, s:real, w:real, h:real ->
     /**
     * Apply a radial glow effect on the current texture.
     **/
@@ -78,19 +78,6 @@ radial_glow_shader ->
     **/
     shader_program
         vertex_shader <<
-            /********************************************************************************
-            **
-            ** Copyright (C) 2011 Taodyne.
-            ** All rights reserved.
-            ** Contact: Taodyne (contact@taodyne.com)
-            **
-            ** This file is part of the Tao Presentations application, developped by Taodyne.
-            ** It can be only used in the software and these modules.
-            **
-            ** If you have questions regarding the use of this file, please contact
-            ** Taodyne at contact@taodyne.com.
-            **
-            ********************************************************************************/
             void main()
             {
                 gl_Position = ftransform();
@@ -98,19 +85,6 @@ radial_glow_shader ->
             }
         >>
         fragment_shader <<
-            /********************************************************************************
-            **
-            ** Copyright (C) 2011 Taodyne.
-            ** All rights reserved.
-            ** Contact: Taodyne (contact@taodyne.com)
-            **
-            ** This file is part of the Tao Presentations application, developped by Taodyne.
-            ** It can be only used in the software and these modules.
-            **
-            ** If you have questions regarding the use of this file, please contact
-            ** Taodyne at contact@taodyne.com.
-            **
-            ********************************************************************************/
             uniform int       number;
             uniform float     glowLength;
             uniform float     glow, shadow;
@@ -134,7 +108,7 @@ radial_glow_shader ->
 
                 vec4 color = texture2D(tex,gl_TexCoord[0].xy);
 
-                vec4 sum = vec4(0.0);
+                vec4 sum;
 
                 // take blur samples in the a radial direction
                 // from the current pixel

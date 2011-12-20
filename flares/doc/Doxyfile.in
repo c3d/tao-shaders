@@ -1,5 +1,0 @@
-@INCLUDE = ../../../Doxyfile
-PROJECT_NAME = \"Flares Effect\"
-PROJECT_NUMBER = 1.011
-QHP_NAMESPACE = com.taodyne.TaoPresentations.modules.Flares.1.011
-QHP_VIRTUAL_FOLDER = Flares

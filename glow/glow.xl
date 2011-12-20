@@ -1,10 +1,10 @@
-﻿// ****************************************************************************
+// ****************************************************************************
 //  flares2.xl                                                      Tao project
 // ****************************************************************************
 //
 //   File Description:
 //
-//    Implement Glow effect
+//    Implement flares effect
 //
 //
 //
@@ -30,11 +30,11 @@ module_description
     import_name "Glow"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
-    version 1.002
+    version 1.0
 
 module_description "fr",
-    name "Effet Néon"
-    description "Fragment shader GLSL qui génére un effet de néon sur une texture. " &
+    name "Effet Eclair"
+    description "Fragment shader GLSL qui génére un effet de glow sur une texture. " &
                 "Code shader écrit par Taodyne."
 
 import "glow2.xl.crypt"

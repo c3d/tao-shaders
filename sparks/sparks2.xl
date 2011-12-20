@@ -23,10 +23,10 @@
 // ****************************************************************************
 
 license_ok ->
-    if check_impress_or_license "Sparks 1.001" then
+    if check_license ("Sparks 1.0", false) then
         true
     else
-        if blink (1.0, 1.0, 300.0) then
+        if blink (1.0, 1.0) then
            true
         else
            false
@@ -200,5 +200,5 @@ sparks_shader ->
             }
        >>
     shader_set time := TIME                                                           // Time of the sparks evolution
-    shader_set background := (BACKGROUND_R, BACKGROUND_G, BACKGROUND_B, BACKGROUND_A) // Color of the background
+    shader_set background := (BACKGROUND_R, BACKGROUND_B, BACKGROUND_G, BACKGROUND_A) // Color of the background
     shader_set scale := (SCALE_X, SCALE_Y)                                            // Scaling parameters of the sparks
