@@ -30,5 +30,6 @@ INSTALLS    -= thismod_bin
 LICENSE_FILES = flares.taokey.notsigned
 include(../../licenses.pri)
 
-
-
+QMAKE_SUBSTITUTES = doc/Doxyfile.in
+DOXYFILE = doc/Doxyfile
+include(../../modules_doc.pri)
