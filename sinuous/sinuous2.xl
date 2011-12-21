@@ -79,64 +79,38 @@ sinuous_shader ->
     texture ""
     shader_program
         vertex_shader <<
-            /********************************************************************************
-            **
-            ** Copyright (C) 2011 Taodyne.
-            ** All rights reserved.
-            ** Contact: Taodyne (contact@taodyne.com)
-            **
-            ** This file is part of the Tao Presentations application, developped by Taodyne.
-            ** It can be only used in the software and these modules.
-            **
-            ** If you have questions regarding the use of this file, please contact
-            ** Taodyne at contact@taodyne.com.
-            **
-            ********************************************************************************/
-            void main()
-            {
-                gl_Position = ftransform();
-                gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
-            }
+        void main()
+        {
+            gl_Position = ftransform();
+            gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+        }
         >>
         fragment_shader <<
-            /********************************************************************************
-            **
-            ** Copyright (C) 2011 Taodyne.
-            ** All rights reserved.
-            ** Contact: Taodyne (contact@taodyne.com)
-            **
-            ** This file is part of the Tao Presentations application, developped by Taodyne.
-            ** It can be only used in the software and these modules.
-            **
-            ** If you have questions regarding the use of this file, please contact
-            ** Taodyne at contact@taodyne.com.
-            **
-            ********************************************************************************/
-            uniform vec2 move;
-            uniform vec4 color;
-            uniform vec3 sin_low;
-            uniform vec3 pos_low;
-            uniform vec3 mul_low;
-            uniform vec3 sin_high;
-            uniform vec3 pos_high;
-            uniform vec3 mul_high;
+        uniform vec2 move;
+        uniform vec4 color;
+        uniform vec3 sin_low;
+        uniform vec3 pos_low;
+        uniform vec3 mul_low;
+        uniform vec3 sin_high;
+        uniform vec3 pos_high;
+        uniform vec3 mul_high;
 
-            void main()
-            {
-                vec2 p = gl_TexCoord[0].st + move;
+        void main()
+        {
+            vec2 p = gl_TexCoord[0].st + move;
 
-                float lp = dot(p, pos_low.xy) + pos_low.z;
-                float ls = dot(p, sin_low.xy) + sin_low.z;
-                float lm = dot(p, mul_low.xy) + mul_low.z;
-                float ldelta = lp - lm * sin(ls);
-                float lamp = clamp(ldelta, 0.0, 1.0);
+            float lp = dot(p, pos_low.xy) + pos_low.z;
+            float ls = dot(p, sin_low.xy) + sin_low.z;
+            float lm = dot(p, mul_low.xy) + mul_low.z;
+            float ldelta = lp - lm * sin(ls);
+            float lamp = clamp(ldelta, 0.0, 1.0);
 
-                float hp = dot(p, pos_high.xy) + pos_high.z;
-                float hs = dot(p, sin_high.xy) + sin_high.z;
-                float hm = dot(p, mul_high.xy) + mul_high.z;
-                float hdelta = hp - hm * sin(hs);
-                float hamp = clamp(hdelta, 0.0, 1.0);
+            float hp = dot(p, pos_high.xy) + pos_high.z;
+            float hs = dot(p, sin_high.xy) + sin_high.z;
+            float hm = dot(p, mul_high.xy) + mul_high.z;
+            float hdelta = hp - hm * sin(hs);
+            float hamp = clamp(hdelta, 0.0, 1.0);
 
-                gl_FragColor = lamp * (1.0-hamp) * color;
-            }
+            gl_FragColor = lamp * (1.0-hamp) * color;
+        }
         >>
