@@ -1,6 +1,5 @@
 /**
- * @defgroup Sparks Sparks
- * @ingroup Modules
+ * @taomoduledescription{Sparks, Sparks}
  *
  * Generate a changing picture with some sparks.
  *
@@ -11,6 +10,8 @@
  * @include sparks.ddd
  *
  * @image html sparks.png "Output from sparks.ddd"
+ *
+ * @endtaomoduledescription{Sparks}
  * @{
  */
 
