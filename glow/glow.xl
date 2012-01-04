@@ -37,7 +37,7 @@ module_description "fr",
     description "Fragment shader GLSL qui génére un effet de glow sur une texture. " &
                 "Code shader écrit par Taodyne."
 
-import "glow2.xl.bin"
+import "glow2.xl.crypt"
 
 // Example use:
 //

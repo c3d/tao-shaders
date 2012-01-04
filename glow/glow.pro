@@ -21,8 +21,8 @@ include($${TAO_SDK}/modules/modules.pri)
 OTHER_FILES = glow.xl glow.doxy.h \
     glow2.xl
 
-BIN_XL_SOURCES = glow2.xl
-include(../../serialize_xl.pri)
+CRYPT_XL_SOURCES = glow2.xl
+include(../../crypt_xl.pri)
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
@@ -30,3 +30,6 @@ INSTALLS    -= thismod_bin
 LICENSE_FILES = glow.taokey.notsigned
 include(../../licenses.pri)
 
+QMAKE_SUBSTITUTES = doc/Doxyfile.in
+DOXYFILE = doc/Doxyfile
+include(../../modules_doc.pri)

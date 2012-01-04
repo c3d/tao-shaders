@@ -18,7 +18,7 @@ module_description "fr",
                 "https://github.com/nical/webgl-flare. Merci aux "
                 "auteurs: Paul Adenot, Rémi Papillié et Nicolas Silva."
 
-import "flares2.xl.bin"
+import "flares2.xl.crypt"
 
 // Example use:
 //

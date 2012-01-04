@@ -21,7 +21,7 @@ module_description "fr",
                 "https://github.com/ashima/webgl-noise/wiki. " &
                 "Pour plus d'informations, voir le fichier LICENSE dans le repertoire du module."
 
-import "sparks2.xl.bin"
+import "sparks2.xl.crypt"
 
 // Example use:
 //

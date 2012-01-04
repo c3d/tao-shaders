@@ -1,6 +1,5 @@
 /**
- * @defgroup Monjori Monjori shader
- * @ingroup Modules
+ * @taomoduledescription{Monjori, Monjori shader}
  *
  * GLSL fragment shader to generate a changing picture. Written
  * by Mic http://badc0de.jiggawatt.org for the demoscene intro
@@ -22,6 +21,7 @@ rounded_rectangle 0, 0, window_width*80%, window_height*80%, 20
  *
  * @image html "monjori_example.png" "Example"
  *
+ * @endtaomoduledescription{Monjori}
  * @{
  */
 
