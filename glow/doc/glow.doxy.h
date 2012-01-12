@@ -12,9 +12,9 @@
  * @endtaomoduledescription{Glow}
  *
  * @~french
- * @taomoduledescription{Glow, Effet "Glow"}
+ * @taomoduledescription{Glow, Effet néon}
  *
- * Ajoute un effet de brillance sur une image.
+ * Ajoute un effet néon sur une image.
  *
  * Grâce à ce module, vous pouvez ajouter un effet de lumière sur la texture
  * en cours. Les parties les plus claires apparaîssent comme si elles
@@ -22,7 +22,7 @@
  * Voici une illustration de cet effet.
  * @include glow.ddd
  *
- * @image html glow.png "L'effet Glow"
+ * @image html glow.png "L'effet néon"
  * @endtaomoduledescription{Glow}
  *
  * @~

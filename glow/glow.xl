@@ -33,8 +33,8 @@ module_description
     version 1.0
 
 module_description "fr",
-    name "Effet Eclair"
-    description "Fragment shader GLSL qui génére un effet de glow sur une texture. " &
+    name "Effet néon"
+    description "Fragment shader GLSL qui génére un effet néon sur une texture. " &
                 "Code shader écrit par Taodyne."
 
 import "glow2.xl.crypt"
