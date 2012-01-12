@@ -1,6 +1,6 @@
 module_description
     id "1A96ABAE-DC7C-4754-9C1A-77B085764047"
-    name "Sinuous shader effect"
+    name "Sinuous effect"
     description "GLSL fragment shader to generate a changing ribbon."
     import_name "Sinuous"
     author "Taodyne SAS"
@@ -8,7 +8,7 @@ module_description
     version 1.0
 
 module_description "fr",
-    name "Shader sinusoidal"
+    name "Effet sinusoidal"
     description "Fragment shader GLSL pour générer un ruban changeant. "
 
 // Example use:
