@@ -1,6 +1,5 @@
 /**
- * @defgroup Flares Flares shader
- * @ingroup Modules
+ * @taomoduledescription{Flares, Flares shader}
  *
  * GLSL fragment shader to generate a changing picture.
  *
@@ -29,6 +28,7 @@ animated_star Nb
  *
  * @image html "flares_example.png" "Example"
  *
+ * @endtaomoduledescription{Flares}
  * @{
  */
 

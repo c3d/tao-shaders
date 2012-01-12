@@ -1,6 +1,5 @@
 /**
- * @defgroup Sinuous Sinuous
- * @ingroup Modules
+ * @taomoduledescription{Sinuous, Sinuous}
  *
  * Generate a changing ribbon.
  *
@@ -10,6 +9,8 @@
  * @include sinuous.ddd
  *
  * @image html sinuous.png "Output from sinuous.ddd"
+ *
+ * @endtaomoduledescription{Sinuous}
  * @{
  */
 

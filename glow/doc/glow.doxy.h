@@ -1,6 +1,5 @@
 /**
- * @defgroup Glow Glow
- * @ingroup Modules
+ * @taomoduledescription{Glow, Glow}
  *
  * Generate a glow effect on the current picture.
  *
@@ -9,6 +8,7 @@
  * @include glow.ddd
  *
  * @image html glow.png "Output from glow.ddd"
+ * @endtaomoduledescription{Glow}
  * @{
  */
 
