@@ -8,7 +8,7 @@ module_description
     version 1.0
 
 module_description "fr",
-    name "Effet sinusoïdal"
+    name "Effet sinusoidal"
     description "Fragment shader GLSL pour générer un ruban changeant. "
 
 // Example use:
