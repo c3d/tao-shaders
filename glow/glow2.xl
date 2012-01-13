@@ -59,7 +59,7 @@ GLOW_WIDTH := 500.0
 GLOW_SAMPLES -> 7
 GLOW_SAMPLES := 7
 
-radial_glow n:real, l:real, g:real, s:real, w:real, h:real ->
+radial_glow n:integer, l:real, g:real, s:real, w:real, h:real ->
     /**
     * Apply a radial glow effect on the current texture.
     **/
