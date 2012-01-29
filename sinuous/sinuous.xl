@@ -1,0 +1,18 @@
+module_description
+    id "1A96ABAE-DC7C-4754-9C1A-77B085764047"
+    name "Sinuous effect"
+    description "GLSL fragment shader to generate a changing ribbon."
+    import_name "Sinuous"
+    author "Taodyne SAS"
+    website "http://www.taodyne.com"
+    version 1.0
+
+module_description "fr",
+    name "Effet sinusoïdal"
+    description "Fragment shader GLSL pour générer un ruban changeant. "
+
+// Example use:
+//
+// sinuous_shape 0.0, 0.0, window_width, window_height
+
+import "sinuous2.xl.crypt"

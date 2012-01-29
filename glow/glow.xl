@@ -1,0 +1,46 @@
+﻿// ****************************************************************************
+//  flares2.xl                                                      Tao project
+// ****************************************************************************
+//
+//   File Description:
+//
+//    Implement Glow effect
+//
+//
+//
+//
+//
+//
+//
+//
+// ****************************************************************************
+// This document is released under the GNU General Public License.
+// See http://www.gnu.org/copyleft/gpl.html and Matthew 25:22 for details
+//  (C) 2011 Christophe de Dinechin <christophe@taodyne.com>
+//  (C) 2011 Jérôme Forissier <jerome@taodyne.com>
+//  (C) 2011 Catherine Burvelle <cathy@taodyne.com>
+//  (C) 2011 Taodyne SAS
+// ****************************************************************************
+
+module_description
+    id "ee8489fe-b2c5-4eda-990b-50250452b9a2"
+    name "Glow effect"
+    description "GLSL fragment shader to generate a glow effect on a texture. " &
+                "Shader code written by Taodyne."
+    import_name "Glow"
+    author "Taodyne SAS"
+    website "http://www.taodyne.com"
+    version 1.0
+
+module_description "fr",
+    name "Effet Néon"
+    description "Fragment shader GLSL qui génére un effet de néon sur une texture. " &
+                "Code shader écrit par Taodyne."
+
+import "glow2.xl.crypt"
+
+// Example use:
+//
+// texture "earth.bmp"
+// radial_glow 15, 1.0, 1.0, 1.0, 100, 100
+// rectangle 0, 0, window_width, window_height

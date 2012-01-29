@@ -1,0 +1,33 @@
+import Glow 
+
+clear_color 0.0, 0.0, 0.0, 0.0 
+color "white" 
+ww -> window_width 
+wh -> window_height 
+frame_texture ww, wh, 
+    D -> 1.5 * wh 
+    R -> 0.1 
+    d -> D * R 
+    s -> d * (0.8 + sin (0.5 * time) ^ 2) 
+    my_torus -> 
+        locally 
+            rotatey 60 
+            torus 0, 0, 0, D, D, d, 50, 50, R 
+    clear_color 0.0, 0.0, 0.0, 1.0 
+    translatex -2 * s 
+    color 1.0, 0.0, 0.5 
+    my_torus 
+    translatex s 
+    color 1.0, 0.2, 0.0 
+    my_torus 
+    translatex s 
+    color 0, 0.7, 1.0 
+    my_torus 
+    translatex s 
+    color 0.0, 1.0, 0.0 
+    my_torus 
+    translatex s 
+    color 1.0, 1.0, 0.0 
+    my_torus 
+radial_glow 20, 1.0, 1.0, 1.0, ww / (12 * abs sin (1.5 * time) ) , wh / (12 * abs sin (1.5 * time) ) 
+rectangle 0, 0, ww, wh

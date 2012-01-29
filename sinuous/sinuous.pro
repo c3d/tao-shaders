@@ -1,5 +1,5 @@
 # ******************************************************************************
-#  monjori.pro                                                      Tao project
+#  sinuous.pro                                                      Tao project
 # ******************************************************************************
 # File Description:
 # Qt build file for the Monjori module
@@ -13,21 +13,21 @@
 # (C) 2011 Taodyne SAS
 # ******************************************************************************
 
-MODINSTDIR = monjori
+MODINSTDIR = sinuous
 
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = monjori.xl module.doxy.h \
-    monjori2.xl
+OTHER_FILES = sinuous.xl sinuous.doxy.h \
+    sinuous2.xl
 
-CRYPT_XL_SOURCES = monjori2.xl
+CRYPT_XL_SOURCES = sinuous2.xl
 include(../../crypt_xl.pri)
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
 
-LICENSE_FILES = monjori.taokey.notsigned
+LICENSE_FILES = sinuous.taokey.notsigned
 include(../../licenses.pri)
 
 QMAKE_SUBSTITUTES = doc/Doxyfile.in

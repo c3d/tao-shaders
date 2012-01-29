@@ -1,10 +1,10 @@
 # ******************************************************************************
-#  monjori.pro                                                      Tao project
+#  sparks.pro                                                        Tao project
 # ******************************************************************************
 # File Description:
-# Qt build file for the Monjori module
+# Qt build file for the Sparks module
 #
-# The Monjori module defines a GLSL shader 
+# The Sparks module defines a GLSL shader
 #
 # ******************************************************************************
 # This software is property of Taodyne SAS - Confidential
@@ -13,21 +13,24 @@
 # (C) 2011 Taodyne SAS
 # ******************************************************************************
 
-MODINSTDIR = monjori
+MODINSTDIR = sparks
 
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = monjori.xl module.doxy.h \
-    monjori2.xl
+OTHER_FILES = sparks.xl sparks.doxy.h \
+    sparks2.xl
 
-CRYPT_XL_SOURCES = monjori2.xl
+files.path  = $$APPINST/modules/sparks
+files.files = LICENSE
+
+CRYPT_XL_SOURCES = sparks2.xl
 include(../../crypt_xl.pri)
 
-INSTALLS    += thismod_icon
+INSTALLS    += thismod_icon files
 INSTALLS    -= thismod_bin
 
-LICENSE_FILES = monjori.taokey.notsigned
+LICENSE_FILES = sparks.taokey.notsigned
 include(../../licenses.pri)
 
 QMAKE_SUBSTITUTES = doc/Doxyfile.in
