@@ -26,7 +26,7 @@ license_ok ->
     if check_license ("Glow 1.0", false) then
         true
     else
-        if blink (1.0, 1.0) then
+        if blink (1.0, 1.0, 300.0) then
            true
         else
            false
@@ -59,7 +59,7 @@ GLOW_WIDTH := 500.0
 GLOW_SAMPLES -> 7
 GLOW_SAMPLES := 7
 
-radial_glow n:real, l:real, g:real, s:real, w:real, h:real ->
+radial_glow n:integer, l:real, g:real, s:real, w:real, h:real ->
     /**
     * Apply a radial glow effect on the current texture.
     **/
