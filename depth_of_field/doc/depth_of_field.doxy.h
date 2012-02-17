@@ -10,6 +10,7 @@
  * The following example draws two pool balls and changes focus from the
  * nearest to the farthest ball, alternatively. The ball that is not on the
  * focus plane appears blurry.
+ * <a href="http://www.youtube.com/watch?feature=player_detailpage&v=hpRpIVauG40">Check the video on YouTube</a>.
  *
  * @image html "pool_balls.png" "Simulation of a limited depth of field"
  *
@@ -29,6 +30,7 @@
  * L'exemple suivant affiche deux boules de billard et fait la mise au point
  * alternativement sur la plus proche, puis la plus lointaine. La boule qui
  * ne se trouve pas dans le plan focal apparaît floue.
+ * <a href="http://www.youtube.com/watch?feature=player_detailpage&v=hpRpIVauG40">La vidéo sur YouTube</a>.
  *
  * @image html "pool_balls.png" "Simulation d'une profondeur de champ limitée"
  *
