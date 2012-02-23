@@ -134,7 +134,7 @@ radial_glow_shader ->
 
                 vec4 color = texture2D(tex,gl_TexCoord[0].xy);
 
-                vec4 sum;
+                vec4 sum = vec4(0.0);
 
                 // take blur samples in the a radial direction
                 // from the current pixel
