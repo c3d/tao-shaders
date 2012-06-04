@@ -18,7 +18,7 @@
  * @~
  * @include sinuous.ddd
  *
- * @image html sinuous.png "Sinuous effect"
+ * @image html sinuous.png "Sinuous"
  *
  * @endtaomoduledescription{Sinuous}
  * @{
