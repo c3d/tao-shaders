@@ -22,17 +22,24 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Monjori 1.012"
+license_ok ->
+    if check_impress_or_license "Monjori 1.011" then
+        true
+    else
+        if blink (1.0, 1.0, 300.0) then
+           true
+        else
+           false
 
 // Time
 tm -> 0.0
 
 monjori t:real ->
-    license_check
-    tm := t
-    // Set an empty texture to define texture coordinates (the shader uses them)
-    texture ""
-    monjori_shader
+    if license_ok then
+        tm := t
+        // Set an empty texture to define texture coordinates (the shader uses them)
+        texture ""
+        monjori_shader
 
 monjori_shader ->
     shader_program
