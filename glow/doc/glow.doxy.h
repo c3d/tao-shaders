@@ -8,7 +8,7 @@
  * The following code shows an example of this module.
  * @include glow.ddd
  *
- * @image html glow.png "The glow effect"
+ * @image html glow.png "Output from glow.ddd"
  * @endtaomoduledescription{Glow}
  *
  * @~french
