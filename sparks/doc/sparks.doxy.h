@@ -77,12 +77,12 @@ sparks_color(r:real, g:real, b:real, a:real);
  * @~english
  * Applies sparks effect.
  * The picture changes slowly as the value of @p t changes. Typically, use
- * @p time or @p page_time for this parameter.
+ * @ref time or @ref page_time for this parameter.
  * (@p sx, @p sy) are scaling factors ; try 1000.
  * @~french
  * Active l'effet éclairs.
- * L'image change pour chaque valeur de @p t. Vous pouvez utiliser @p time
- * ou @p page_time pour ce paramètre.
+ * L'image change pour chaque valeur de @p t. Vous pouvez utiliser @ref time
+ * ou @ref page_time pour ce paramètre.
  * (@p sx, @p sy) sont des facteurs de dimension ; essayez 1000.
  */
 sparks(t:real, sx:real, sy:real);
