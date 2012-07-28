@@ -23,7 +23,7 @@
 // ****************************************************************************
 
 sinuous_license_ok ->
-    if check_impress_or_license "Sinuous 1.001" then
+    if check_impress_or_license "Sinuous 1.002" then
         true
     else
         if blink (1.0, 1.0, 300.0) then
