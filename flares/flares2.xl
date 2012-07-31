@@ -22,18 +22,25 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Flares 1.011"
+license_ok ->
+    if check_impress_or_license "Flares 1.011" then
+        true
+    else
+        if blink (1.0, 1.0, 300.0) then
+           true
+        else
+           false
 
 tm -> 0.0
 st -> 0.0
 
 flares t:real, s:real ->
-    license_check
-    st := s
-    tm := t
-    // Set an empty texture to define texture coordinates (the shader uses them)
-    texture ""
-    flare_shader
+    if license_ok then
+        st := s
+        tm := t
+        // Set an empty texture to define texture coordinates (the shader uses them)
+        texture ""
+        flare_shader
 
 flare_shader ->
     shader_program
