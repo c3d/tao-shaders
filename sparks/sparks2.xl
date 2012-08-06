@@ -22,14 +22,7 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_ok ->
-    if check_impress_or_license "Sparks 1.001" then
-        true
-    else
-        if blink (1.0, 1.0, 300.0) then
-           true
-        else
-           false
+license_check -> check_impress_or_license "Sparks 1.001"
 
 TIME -> 0.0
 TIME := 0.0
@@ -55,11 +48,11 @@ sparks_color r:real, g:real, b:real, a:real ->
     BACKGROUND_A := a
 
 sparks t:real, sx:real, sy:real ->
-    if license_ok then
-        TIME := t
-        SCALE_X := sx
-        SCALE_Y := sy
-        sparks_shader
+    license_check
+    TIME := t
+    SCALE_X := sx
+    SCALE_Y := sy
+    sparks_shader
 
 // sparks-generating shader
 sparks_shader ->
