@@ -22,18 +22,11 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_ok ->
-    if check_impress_or_license "Glow 1.003" then
-        true
-    else
-        if blink (1.0, 1.0, 300.0) then
-           true
-        else
-           false
+license_check -> check_impress_or_license "Glow 1.003"
 
-// -------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //   RADIAL GLOW
-// -------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 // Ratio of the glow
 GLOW_RATIO -> 1.0
@@ -64,13 +57,13 @@ radial_glow n:integer, l:real, g:real, s:real, w:real, h:real ->
     * Apply a radial glow effect on the current texture.
     **/
     GLOW_SAMPLES := n
-    if license_ok then
-        GLOW_LENGTH  := l
-        GLOW_RATIO   := g
-        SHADOW_RATIO := s
-        GLOW_WIDTH   := w
-        GLOW_HEIGHT  := h
-        radial_glow_shader
+    license_check
+    GLOW_LENGTH  := l
+    GLOW_RATIO   := g
+    SHADOW_RATIO := s
+    GLOW_WIDTH   := w
+    GLOW_HEIGHT  := h
+    radial_glow_shader
 
 radial_glow_shader ->
     /**
