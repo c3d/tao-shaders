@@ -22,14 +22,7 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-sinuous_license_ok ->
-    if check_impress_or_license "Sinuous 1.001" then
-        true
-    else
-        if blink (1.0, 1.0, 300.0) then
-           true
-        else
-           false
+sinuous_license_check -> check_impress_or_license "Sinuous 1.002"
 
 sinuous_shape X:real, Y:real, W:real, H:real ->
     /**
@@ -37,39 +30,39 @@ sinuous_shape X:real, Y:real, W:real, H:real ->
     * @a X and @a Y indicate the center of the shape.
     * @a W and @a H are its dimensions.
     **/
-    if sinuous_license_ok then
-        locally
-            sinuous_shader
+    sinuous_license_check
+    locally
+        sinuous_shader
 
-            shader_set pos_low := (25, 0, -3)
-            shader_set sin_low := (0, 11 + 3.5 * sin time, 0)
-            shader_set mul_low := (0, 0, 1)
+        shader_set pos_low := (25, 0, -3)
+        shader_set sin_low := (0, 11 + 3.5 * sin time, 0)
+        shader_set mul_low := (0, 0, 1)
 
-            shader_set pos_high := (25, 1, -5)
-            shader_set sin_high := (0, 11 + 3 * sin time, 0)
-            shader_set mul_high := (0, 0, 1)
+        shader_set pos_high := (25, 1, -5)
+        shader_set sin_high := (0, 11 + 3 * sin time, 0)
+        shader_set mul_high := (0, 0, 1)
 
-            shader_set move := (0.0, 0.2)
-            shader_set color := (1.0, 0.7, 0.0, 0.9)
-            rectangle X, Y, W, H
+        shader_set move := (0.0, 0.2)
+        shader_set color := (1.0, 0.7, 0.0, 0.9)
+        rectangle X, Y, W, H
 
-            shader_set move := (0.0, 0.4)
-            shader_set color := (0.2, 0.0, 0.6, 0.9)
-            rectangle X, Y, W, H
+        shader_set move := (0.0, 0.4)
+        shader_set color := (0.2, 0.0, 0.6, 0.9)
+        rectangle X, Y, W, H
 
-            shader_set pos_low := (23, -1, -2)
-            shader_set pos_high := (23, 3, -8)
-            shader_set sin_low := (0, 22, 2 + sin (0.3 * time))
-            shader_set sin_high := (0, 25, 3 + sin (0.32 * time))
-            shader_set move := (-0.5, 0.6)
-            shader_set color := (0.8, 0.0, 0.1, 0.9)
-            rectangle X, Y, W, H
+        shader_set pos_low := (23, -1, -2)
+        shader_set pos_high := (23, 3, -8)
+        shader_set sin_low := (0, 22, 2 + sin (0.3 * time))
+        shader_set sin_high := (0, 25, 3 + sin (0.32 * time))
+        shader_set move := (-0.5, 0.6)
+        shader_set color := (0.8, 0.0, 0.1, 0.9)
+        rectangle X, Y, W, H
 
-            shader_set pos_low := (25 * sin (0.11 * time), 25 * cos (0.11 * time), -3)
-            shader_set pos_high := (25 * sin (0.22 * time), 25 * cos (0.22 * time), -4)
-            shader_set move := (0.1, 0.8)
-            shader_set color := (0.8 + 0.2 * sin (0.17 * time), 0.2, 0.1, 0.4)
-            rectangle X, Y, W, H
+        shader_set pos_low := (25 * sin (0.11 * time), 25 * cos (0.11 * time), -3)
+        shader_set pos_high := (25 * sin (0.22 * time), 25 * cos (0.22 * time), -4)
+        shader_set move := (0.1, 0.8)
+        shader_set color := (0.8 + 0.2 * sin (0.17 * time), 0.2, 0.1, 0.4)
+        rectangle X, Y, W, H
 
 sinuous_shader ->
     /**
