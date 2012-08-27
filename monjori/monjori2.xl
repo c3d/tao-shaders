@@ -22,7 +22,7 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Monjori 1.012"
+license_check -> check_impress_or_license "Monjori 1.011"
 
 // Time
 tm -> 0.0

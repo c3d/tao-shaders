@@ -22,7 +22,7 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Sparks 1.002"
+license_check -> check_impress_or_license "Sparks 1.001"
 
 TIME -> 0.0
 TIME := 0.0
