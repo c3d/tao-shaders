@@ -22,7 +22,7 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Flares 1.011"
+license_check -> check_impress_or_license "Flares 1.012"
 
 tm -> 0.0
 st -> 0.0
