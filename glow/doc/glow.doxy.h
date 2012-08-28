@@ -52,7 +52,7 @@
  * primitive contrôlent comment le floutage est fait (@p n, @p l, @p w, @p h)
  * et comment il est mélangé à l'image (@p g, @p s). Pour un bon résultat,
  * utiliser une fraction de la taille de la texture pour @p w et @p h, comme
- * exemple (@ref texture_width / 8) et (@ref texture_height / 8).
+ * exemple (@p texture_width / 8) et (@p texture_height / 8).
  * La finesse du halo est meilleure si @p n est élevé, mais augmenter ce
  * paramètre demande plus de temps de calcul.
  *
