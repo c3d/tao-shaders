@@ -14,15 +14,15 @@
 //
 //
 // ****************************************************************************
-// This software is property of Taodyne SAS - Confidential
-// Ce logiciel est la propriété de Taodyne SAS - Confidentiel
+// This document is released under the GNU General Public License.
+// See http://www.gnu.org/copyleft/gpl.html and Matthew 25:22 for details
 //  (C) 2011 Christophe de Dinechin <christophe@taodyne.com>
 //  (C) 2011 Jérôme Forissier <jerome@taodyne.com>
 //  (C) 2011 Catherine Burvelle <cathy@taodyne.com>
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-sinuous_license_check -> check_impress_or_license "Sinuous 1.003"
+sinuous_license_check -> check_impress_or_license "Sinuous 1.002"
 
 sinuous_shape X:real, Y:real, W:real, H:real ->
     /**
