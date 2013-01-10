@@ -2,7 +2,7 @@
  * @~english
  * @taomoduledescription{Sinuous, Sinuous effect}
  *
- * <tt>import Sinuous</tt> - Generate a changing ribbon.\n
+ * Generate a changing ribbon.
  *
  * This module allows you to create a changing picture with some sinuous effects.
  *
@@ -11,8 +11,8 @@
  * @~french
  * @taomoduledescription{Sinuous, Effet sinusoïdal}
  *
- * <tt>import Sinuous</tt> - Un <em>fragment shader</em> GLSL qui génère une image avec des formes
- * ondulantes.\n
+ * Un <em>fragment shader</em> GLSL qui génère une image avec des formes
+ * ondulantes.
  *
  * Un exemple :
  * @~

@@ -2,7 +2,7 @@
  * @~english
  * @taomoduledescription{Glow, Glow}
  *
- * <tt>import Glow</tt> - Generate a glow effect on the current picture.\n
+ * Generate a glow effect on the current picture.
  *
  * This module allows you to add some glow on the current texture.
  * The following code shows an example of this module.
@@ -14,7 +14,7 @@
  * @~french
  * @taomoduledescription{Glow, Effet néon}
  *
- * <tt>import Glow</tt> - Ajoute un effet néon sur une image.\n
+ * Ajoute un effet néon sur une image.
  *
  * Grâce à ce module, vous pouvez ajouter un effet de lumière sur la texture
  * en cours. Les parties les plus claires apparaîssent comme si elles
