@@ -2,14 +2,14 @@
  * @~english
  * @taomoduledescription{Flares, Flares shader}
  *
- * GLSL fragment shader to generate a changing picture.
+ * <tt>import Flares</tt> - GLSL fragment shader to generate a changing picture.\n
  *
  * An example:
  * @~french
  * @taomoduledescription{Flares, Effet "Flares"}
  *
- * Un <em>fragment shader</em> GLSL qui génère des formes géométriques
- * changeantes.
+ * <tt>import Flares</tt> - Un <em>fragment shader</em> GLSL qui génère des formes géométriques
+ * changeantes.\n
  *
  * Un example:
  * @~

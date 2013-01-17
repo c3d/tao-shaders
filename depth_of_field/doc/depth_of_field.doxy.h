@@ -2,7 +2,7 @@
  * @~english
  * @taomoduledescription{DepthOfField, Depth Of Field Effect}
  *
- * Depth Of Field Effect.\n
+ * <tt>import DepthOfField</tt> - Depth Of Field Effect.\n
  *
  * This module simulates the depth blur that occurs when objects are filmed through
  * a lens with a limited depth of field.
@@ -22,7 +22,7 @@
  * @~french
  * @taomoduledescription{DepthOfField, Effet de profondeur de champ}
  *
- * Effet de profondeur de champ.\n
+ * <tt>import DepthOfField</tt> - Effet de profondeur de champ.\n
  *
  * Ce module simule le flou qui apparaît sur une image lorsqu'on filme des
  * objets avec un objectif dont la profondeur de champ est limitée.
