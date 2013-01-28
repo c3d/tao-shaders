@@ -2,7 +2,7 @@
  * @~english
  * @taomoduledescription{Monjori, Monjori shader}
  *
- * GLSL fragment shader to generate a changing picture. Written
+ * <tt>import Monjori</tt> - GLSL fragment shader to generate a changing picture. Written
  * by Mic http://badc0de.jiggawatt.org for the demoscene intro
  * Monjori. Adapted from
  * http://www.iquilezles.org/apps/shadertoy/?p=monjori. Used with
@@ -13,7 +13,7 @@
  * @~french
  * @taomoduledescription{Monjori, Effet "Monjori"}
  *
- * Un <em>fragment shader</em> GLSL qui génère des formes géométriques
+ * <tt>import Monjori</tt> - Un <em>fragment shader</em> GLSL qui génère des formes géométriques
  * changeantes. Écrit par Mic http://badc0de.jiggawatt.org pour la
  * démo Monjori. Adaptation de
  * http://www.iquilezles.org/apps/shadertoy/?p=monjori. Utilisé avec
