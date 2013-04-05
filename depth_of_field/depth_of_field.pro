@@ -30,6 +30,9 @@ INSTALLS    -= thismod_bin
 
 HEADERS += doc/depth_of_field.doxy.h
 
+LICENSE_FILES = depth_of_field.taokey.notsigned
+include(../../licenses.pri)
+
 QMAKE_SUBSTITUTES = doc/Doxyfile.in
 DOXYFILE = doc/Doxyfile
 DOXYLANG = en,fr

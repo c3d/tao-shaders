@@ -30,6 +30,9 @@ include(../../crypt_xl.pri)
 INSTALLS    += thismod_icon files
 INSTALLS    -= thismod_bin
 
+LICENSE_FILES = sparks.taokey.notsigned
+include(../../licenses.pri)
+
 QMAKE_SUBSTITUTES = doc/Doxyfile.in
 DOXYFILE = doc/Doxyfile
 DOXYLANG = en,fr
