@@ -22,12 +22,15 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
+sinuous_license_check -> check_impress_or_license "Sinuous 1.003"
+
 sinuous_shape X:real, Y:real, W:real, H:real ->
     /**
     * Draw four interconnected sinuous shape at the given coordinates.
     * @a X and @a Y indicate the center of the shape.
     * @a W and @a H are its dimensions.
     **/
+    sinuous_license_check
     locally
         sinuous_shader
 

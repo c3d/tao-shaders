@@ -1,7 +1,8 @@
 /**
  * @~english
  * @taomoduledescription{Sparks, Sparks}
- * <tt>import Sparks</tt> - Generate a changing picture with some sparks.@n
+ *
+ * <tt>import Sparks</tt> - Generate a changing picture with some sparks.\n
  *
  * This effect is adapted from a shader written by Ashima Arts and Stefan Gustavson.
  * Used with permission.
@@ -31,8 +32,8 @@ sparks_effect
  *
  * @~french
  * @taomoduledescription{Sparks, Effet éclairs}
- * <tt>import Sparks</tt> - Un <em>fragment shader</em> GLSL qui affiche des éclairs.@n
  *
+ * <tt>import Sparks</tt> - Un <em>fragment shader</em> GLSL qui affiche des éclairs.
  * Adapté d'un @a shader écrit par Ashima Arts et Stefan Gustavson.
  *
  * Voici un exemple.
