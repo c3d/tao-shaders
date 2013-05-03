@@ -1,7 +1,3 @@
-license_check -> check_impress_or_license "DepthOfField 1.003"
-
-
-
 // Do not blur more than a given amount
 DOF_MAXBLUR -> 0.0
 DOF_MAXBLUR := 1.5
@@ -18,7 +14,6 @@ DOF_ZFAR := z_far
 // Execute Body and show the result as a texture of W x H pixels
 // with a depth-of-field effect (depth blur).
 dof_frame_texture W, H, Body ->
-    license_check
     frame_texture_with_depth W, H, DepthTex,
         do Body
     DepthTex -> 0
@@ -31,7 +26,6 @@ dof_frame_texture W, H, Body ->
 
 
 dof_shader ->
-    license_check
     dof_shader_program
     shader_set bgl_RenderedTexture := 0
     shader_set bgl_DepthTexture := 1
