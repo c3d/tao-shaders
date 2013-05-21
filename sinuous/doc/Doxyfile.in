@@ -1,5 +1,5 @@
 @INCLUDE = ../../../Doxyfile
 PROJECT_NAME = \"Sinuous Effect\"
-PROJECT_NUMBER = 1.004
-QHP_NAMESPACE = com.taodyne.TaoPresentations.modules.Sinuous.1.004
+PROJECT_NUMBER = 1.003
+QHP_NAMESPACE = com.taodyne.TaoPresentations.modules.Sinuous.1.003
 QHP_VIRTUAL_FOLDER = Sinuous
