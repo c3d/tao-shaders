@@ -22,13 +22,10 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Monjori 1.013"
-
 // Time
 tm -> 0.0
 
 monjori t:real ->
-    license_check
     tm := t
     // Set an empty texture to define texture coordinates (the shader uses them)
     texture ""
