@@ -22,7 +22,6 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Sparks 1.003"
 
 TIME -> 0.0
 TIME := 0.0
@@ -48,7 +47,6 @@ sparks_color r:real, g:real, b:real, a:real ->
     BACKGROUND_A := a
 
 sparks t:real, sx:real, sy:real ->
-    license_check
     TIME := t
     SCALE_X := sx
     SCALE_Y := sy
