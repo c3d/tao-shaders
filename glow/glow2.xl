@@ -22,8 +22,6 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Glow 1.005"
-
 // ----------------------------------------------------------------------------
 //   RADIAL GLOW
 // ----------------------------------------------------------------------------
@@ -57,7 +55,6 @@ radial_glow n:integer, l:real, g:real, s:real, w:real, h:real ->
     * Apply a radial glow effect on the current texture.
     **/
     GLOW_SAMPLES := n
-    license_check
     GLOW_LENGTH  := l
     GLOW_RATIO   := g
     SHADOW_RATIO := s

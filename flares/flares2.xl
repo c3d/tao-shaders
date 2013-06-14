@@ -22,13 +22,10 @@
 //  (C) 2011 Taodyne SAS
 // ****************************************************************************
 
-license_check -> check_impress_or_license "Flares 1.013"
-
 tm -> 0.0
 st -> 0.0
 
 flares t:real, s:real ->
-    license_check
     st := s
     tm := t
     // Set an empty texture to define texture coordinates (the shader uses them)
