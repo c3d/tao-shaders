@@ -42,6 +42,7 @@ flare_shader ->
         }
         >>
         fragment_shader <<
+        uniform float time;
         uniform float blink;
         uniform float blink2;
         uniform float saturation;
@@ -97,6 +98,7 @@ flare_shader ->
         }
         >>
     shader_set saturation := st
+    shader_set time := tm
     shader_set blink := 5.0 - (integer (tm / 500.0) ) mod 20
     shader_set blink2 := 20.0 - (integer (tm / 120.0) ) mod 20
     shader_set mBallWeights := (2.3 + cos (tm * 5.0e-06) + cos (tm * 1.0e-07); 2.0 + sin (tm * 0.0001) * cos (tm * 0.001); -0.4 + cos (tm * 0.005) * 1.5; -1.3 + cos (tm * 1.0e-06) * 1.6; 1.0 + sin (tm * 0.0001) * 0.3)

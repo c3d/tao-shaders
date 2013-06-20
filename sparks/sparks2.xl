@@ -84,7 +84,6 @@ sparks_shader ->
 
             uniform float time;
             uniform vec4 background;
-            uniform int lights;
 
             varying vec2 vUv;
             varying float shade;
@@ -188,15 +187,9 @@ sparks_shader ->
             {
                 vec3 coord = vec3 (vUv, -time);
                 float n = shade * surface (coord);
-                vec4 color = vec4(1.0);
-                if(lights > 0)
-                    color = gl_FrontLightModelProduct.sceneColor * gl_FrontMaterial.ambient + gl_FrontMaterial.diffuse;
-                else
-                    color = gl_Color;
-                gl_FragColor = mix(background, color, n);
+                gl_FragColor = mix(background, gl_Color, n);
             }
        >>
     shader_set time := TIME                                                           // Time of the sparks evolution
     shader_set background := (BACKGROUND_R, BACKGROUND_G, BACKGROUND_B, BACKGROUND_A) // Color of the background
     shader_set scale := (SCALE_X, SCALE_Y)                                            // Scaling parameters of the sparks
-    shader_set lights := lights_mask
