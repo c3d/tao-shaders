@@ -8,7 +8,7 @@
  *
  * The following code shows an example of this module.
  *
-@code
+ * @code
 import Sparks
 
 sparks_effect ->
@@ -25,7 +25,7 @@ sparks_effect ->
     torus 0, 0, 0, ww, ww, ww / 2, 50, 50, 0.3
 
 sparks_effect
-@endcode
+ * @endcode
  *
  * @image html sparks.png "Sparks effect"
  *
@@ -37,7 +37,7 @@ sparks_effect
  *
  * Voici un exemple.
  *
-@code
+ * @code
 import Sparks
 
 effet_éclairs ->
@@ -54,7 +54,7 @@ effet_éclairs ->
     torus 0, 0, 0, ww, ww, ww / 2, 50, 50, 0.3
 
 effet_éclairs
-@endcode
+ * @endcode
  *
  * @image html sparks.png "Effet éclairs"
  * @~
