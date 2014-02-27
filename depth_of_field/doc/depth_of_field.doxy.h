@@ -1,8 +1,7 @@
 /**
  * @~english
  * @taomoduledescription{DepthOfField, Depth Of Field Effect}
- *
- * <tt>import DepthOfField</tt> - Depth Of Field Effect.\n
+ * <tt>import DepthOfField</tt> - Depth Of Field Effect.@n
  *
  * This module simulates the depth blur that occurs when objects are filmed through
  * a lens with a limited depth of field.
@@ -21,8 +20,7 @@
  *
  * @~french
  * @taomoduledescription{DepthOfField, Effet de profondeur de champ}
- *
- * <tt>import DepthOfField</tt> - Effet de profondeur de champ.\n
+ * <tt>import DepthOfField</tt> - Effet de profondeur de champ.@n
  *
  * Ce module simule le flou qui apparaît sur une image lorsqu'on filme des
  * objets avec un objectif dont la profondeur de champ est limitée.
@@ -67,7 +65,7 @@
  * @param Body Le code à exécuter et à afficher dans la texture.
  *
  * @~
- * @code
+@code
 import DepthOfField
 
 blue_star ->
@@ -88,7 +86,7 @@ dof_frame_texture 300, 200,
     blue_star
   blue_star
 rectangle 0, 0, 300, 200
- * @endcode
+@endcode
  */
 dof_frame_texture(W:real, H:real, Body:code);
 
