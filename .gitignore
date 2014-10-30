@@ -12,5 +12,5 @@ moc_*.cpp
 /debug
 /release
 /*.taokey
-doc/Doxyfile
-doc/output
+**/Doxyfile
+**/output
