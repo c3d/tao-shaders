@@ -14,9 +14,8 @@
 //
 //
 // ****************************************************************************
-// This file may be used in accordance with the terms and conditions contained
-// in the Tao Presentations license agreement, or alternatively, in a signed
-// license agreement between you and Taodyne SAS.
+// This software is licensed under the GNU General Public License v3
+// See file COPYING for details.
 //  (C) 2011 Christophe de Dinechin <christophe@taodyne.com>
 //  (C) 2011 Jérôme Forissier <jerome@taodyne.com>
 //  (C) 2011 Catherine Burvelle <cathy@taodyne.com>
@@ -97,7 +96,7 @@ radial_glow_shader ->
             ** All rights reserved.
             ** Contact: Taodyne (contact@taodyne.com)
             **
-            ** This file is part of the Tao Presentations application, developped by Taodyne.
+            ** This file is part of the Tao3D application, developped by Taodyne.
             ** It can be only used in the software and these modules.
             **
             ** If you have questions regarding the use of this file, please contact
@@ -117,7 +116,7 @@ radial_glow_shader ->
             ** All rights reserved.
             ** Contact: Taodyne (contact@taodyne.com)
             **
-            ** This file is part of the Tao Presentations application, developped by Taodyne.
+            ** This file is part of the Tao3D application, developped by Taodyne.
             ** It can be only used in the software and these modules.
             **
             ** If you have questions regarding the use of this file, please contact
