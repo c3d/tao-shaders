@@ -19,11 +19,7 @@ MODINSTDIR = depth_of_field
 
 include(../../modules.pri)
 
-OTHER_FILES = depth_of_field.xl \
-              depth_of_field2.xl
-
-CRYPT_XL_SOURCES = depth_of_field2.xl
-include(../../crypt_xl.pri)
+OTHER_FILES = depth_of_field.xl 
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin

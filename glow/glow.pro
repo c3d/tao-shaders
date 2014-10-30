@@ -18,11 +18,7 @@ MODINSTDIR = glow
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = glow.xl glow.doxy.h \
-    glow2.xl
-
-CRYPT_XL_SOURCES = glow2.xl
-include(../../crypt_xl.pri)
+OTHER_FILES = glow.xl glow.doxy.h 
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin

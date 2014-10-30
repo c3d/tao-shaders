@@ -18,11 +18,7 @@ MODINSTDIR = monjori
 TAO_SDK = ../../..
 include($${TAO_SDK}/modules/modules.pri)
 
-OTHER_FILES = monjori.xl module.doxy.h \
-    monjori2.xl
-
-CRYPT_XL_SOURCES = monjori2.xl
-include(../../crypt_xl.pri)
+OTHER_FILES = monjori.xl module.doxy.h
 
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
