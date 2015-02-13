@@ -9,8 +9,8 @@ lib*.so.*
 moc_*.cpp
 *.o
 *.xl.sig
-/debug
-/release
+**/debug
+**/release
 /*.taokey
 **/Doxyfile
 **/output
